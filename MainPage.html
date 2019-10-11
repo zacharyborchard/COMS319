@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: Impact, sans-serif;
+
+        }
+
+        .header {
+            overflow: hidden;
+            background-color: #f1f1f1;
+            padding: 20px 10px;
+        }
+
+        .header a {
+            float: left;
+            color: rgb(79, 151, 211);
+            text-align: center;
+            padding: 6px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 20px;
+            line-height: 25px;
+        }
+
+        .header a.logo {
+            font-size: 38px;
+            font-weight: bold;
+        }
+
+        .header a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .header a.active {
+            background-color: dodgerblue;
+            color: white;
+        }
+
+        .header-right {
+            float: right;
+        }
+
+        .column {
+            float: left;
+            width: 30%;
+            padding: 15px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <a href="#default" class="logo">Speed Typer</a>
+        <div class="header-right">
+            <a href="#contact">Login</a>
+            <a href="#about">Register</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h2>Red Light- Green Light</h2>
+            <p>The red light green light game will be a typing test that will turn the back of the screen different
+                colors based on when the user should type. This game will be used to improve a users ability to not look
+                at the keyboard while typing. The game mode will have a set amount of characters in order to get
+                equalized highscores and will follow the basic rules of red light green light. If the screen is green
+                then the user can type the given paragraph as fast as possible. The screen will then turn yellow to warn
+                users that they need to stop typing and if they do not stop they will automatically loose and be forced
+                to try again. Users highscores will be based on how fast they can complete the task and will only count
+                when the screen is green.
+            </p>
+        </div>
+        <div class="row">
+            <div class="column">
+                <h2>Time Test!</h2>
+                <p>Timed testing will be used to improve user’s ability to type fast. This will be random paragraphs and
+                    will be focused on the users WPM. If the user messes up on any character than the cursor will not
+                    move forward and will stay on the last correct character.
+                </p>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <h2>Type Fighter</h2>
+                    <p>Type fighter will be a game mode where the user has monsters to “fight” by typing words correctly
+                        to improve typing accuracy. When the user makes a mistake in their typing, health is subtracted
+                        from the user’s overall health. The goal is to defeat as many monsters as possible without dying
+                        and get to a boss. The boss will need to be defeated by typing more difficult strings without
+                        making mistakes. After the user defeats the boss, their wpm and accuracy will be added to the
+                        user’s account and, if appropriate, the leaderboard for the game.
+                    </p>
+                </div>
+
+
+
+</body>
+
+</html>
