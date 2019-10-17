@@ -8,6 +8,7 @@ function validate() {
     {
         if (input[i] !== testString[i])
         {
+            
             alert("you fucked up and typed '" + input[i] +"'");
         }
     }

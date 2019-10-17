@@ -3,8 +3,8 @@
 
 <head>
     <script src="./textbox.js"></script>
+
     <style>
-       
         body {
             margin: 0;
             font-family: Impact, sans-serif;
@@ -49,8 +49,8 @@
 
         .column {
             float: left;
-            width: 30%;
-            padding: 15px;
+            width: 24%;
+            padding: 8px;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
 
@@ -60,10 +60,11 @@
             display: table;
             clear: both;
         }
+
         .demoBox {
-            border-style:double;
+            border-style: double;
             word-wrap: normal;
-            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             padding: 15px;
             text-align: middle;
         }
@@ -80,14 +81,14 @@
         </div>
     </div>
     <div>
-        <p class = demoBox>The quick brown fox jumped over the lazy dog</p>
+        <p class=demoBox>The quick brown fox jumped over the lazy dog</p>
         <form id="input" action="">
             <p id="typeTest">
                 <input id="typetest" type="text" onkeyup="validate()" />
             </p>
         </form>
     </div>
-    <p>This is a change</p>
+
     <div class="row">
         <div class="column">
             <h2>Red Light- Green Light</h2>
@@ -103,24 +104,38 @@
         </div>
         <div class="row">
             <div class="column">
-                <h2>Time Test!</h2>
-                <p>Timed testing will be used to improve user’s ability to type fast. This will be random paragraphs and
-                    will be focused on the users WPM. If the user messes up on any character than the cursor will not
-                    move forward and will stay on the last correct character.
+                <h2>Random characters</h2>
+                <p>The random characters game will be used to help users learn the locations of rarely used keys and odd
+                    key combinations on the keyboard. A randomly generated string of ASCII values will be generated for
+                    the user to type, and the accuracy of typing will be evaluated.
                 </p>
             </div>
             <div class="row">
                 <div class="column">
-                    <h2>Type Fighter</h2>
-                    <p>Type fighter will be a game mode where the user has monsters to “fight” by typing words correctly
-                        to improve typing accuracy. When the user makes a mistake in their typing, health is subtracted
-                        from the user’s overall health. The goal is to defeat as many monsters as possible without dying
-                        and get to a boss. The boss will need to be defeated by typing more difficult strings without
-                        making mistakes. After the user defeats the boss, their wpm and accuracy will be added to the
-                        user’s account and, if appropriate, the leaderboard for the game.
+                    <h2>Time Test!</h2>
+                    <p>Timed testing will be used to improve user’s ability to type fast. This will be random paragraphs
+                        and
+                        will be focused on the users WPM. If the user messes up on any character than the cursor will
+                        not
+                        move forward and will stay on the last correct character.
                     </p>
                 </div>
-
+                <div class="row">
+                    <div class="column">
+                        <h2>Type Fighter</h2>
+                        <p>Type fighter will be a game mode where the user has monsters to “fight” by typing words
+                            correctly
+                            to improve typing accuracy. When the user makes a mistake in their typing, health is
+                            subtracted
+                            from the user’s overall health. The goal is to defeat as many monsters as possible without
+                            dying
+                            and get to a boss. The boss will need to be defeated by typing more difficult strings
+                            without
+                            making mistakes. After the user defeats the boss, their wpm and accuracy will be added to
+                            the
+                            user’s account and, if appropriate, the leaderboard for the game.
+                        </p>
+                    </div>
 
 
 </body>
