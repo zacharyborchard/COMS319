@@ -14,3 +14,31 @@ function validate() {
     }
 
 }
+function startValid(){
+    var sentence = document.getElementById("demoBox").innerHTML;
+    var split = sentence.split(" ");
+    document.getElementById("demoBox").innerHTML = split;
+   
+
+
+
+}
+//The quick brown fox jumped over the lazy dog; then, the dog got mad and jumped over the fox.
+function valid(){
+   
+    
+
+    
+    //var text = ["The ","quick ", "brown ", "fox ", "jumped " , "over ", "the " ,"lazy ", "dog; " ,"then, ", "the ", "dog ", "got ","mad ", and jumped over the fox. ];
+    
+    for(var i =0; i< split.length; i++){
+        document.getElementById("demoBox").innerHTML = split[i];
+    }
+    
+    
+    
+
+
+
+
+}
