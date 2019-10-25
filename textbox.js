@@ -15,12 +15,24 @@ function validate() {
 
 }
 function startValid(){
+    var count =0;
+    var inside = document.getElementById("typetest").value;
     var sentence = document.getElementById("demoBox").innerHTML;
     var split = sentence.split(" ");
-    document.getElementById("demoBox").innerHTML = split;
-   
+    
+    
+    if(inside == split[count]){
+        //document.getElementById.getElementById("typetest").value = "";
+        //inside = "";
+        count ++;
+        alert(split[count] + "Inside: " + inside + " ");
 
-
+        
+    }
+    //document.getElementById("demoBox").innerHTML = "";
+    //for(var i =0; i< split.length; i++){
+      // document.getElementById("demoBox").innerHTML += split[i] + "   ";
+    //}
 
 }
 //The quick brown fox jumped over the lazy dog; then, the dog got mad and jumped over the fox.
