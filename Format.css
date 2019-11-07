@@ -1,24 +1,26 @@
 body {
-    
     font-family: Impact, sans-serif;
     text-align: center;
-    background-image: url("triangle-mosaic.png");
+    background-color: #E0E0E0;
+    margin: 0;
 }
 
 .header {
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: #00aeef;
     padding: 20px 10px;
+    top: 0;
+    width: 100%;
 }
 
 .header a {
     float: left;
-    color: rgb(79, 151, 211);
+    color: #ffffff;
     text-align: center;
     padding: 6px;
     text-decoration: none;
     font-size: 18px;
-    border-radius: 100px;
+    border-radius: 10px;
     line-height: 25px;
 }
 
@@ -28,31 +30,12 @@ body {
 }
 
 .header a:hover {
-    background-color: #ddd;
+    background-color: #ffffff;
     color: black;
-}
-
-.header a.active {
-    background-color: dodgerblue;
-    color: white;
 }
 
 .header-right {
     float: right;
-}
-
-.column {
-    float: left;
-    width: 24%;
-    padding: 8px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 input {
@@ -62,20 +45,69 @@ input {
     height: 25px;
     font-size: 20px;
     padding: 20px;
-    
-   
 }
+
 .demoBox {
-    
-    border : 1px solid dodgerblue;
+    border: 1px solid dodgerblue;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 10px;
-    
     margin: 10px;
-    
+}
 
-    
-   
-    
-    
+
+/*Applies to all elements*/
+
+.masonry {
+    margin: 1.5em 0;
+    padding: 1em;
+    -moz-column-gap: 1.5em;
+    -webkit-column-gap: 1.5em;
+    column-gap: 1.5em;
+    font-size: .85em;
+}
+
+.item {
+    display: inline-block;
+    background: #ffffff;
+    padding: 1em;
+    margin: 2em 0 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-shadow: 3px 3px 6px 2px #134d9959;
+}
+
+.item img {
+    max-width: 100%;
+}
+
+@media only screen and (min-width: 400px) {
+    .masonry {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .masonry {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .masonry {
+        -moz-column-count: 2.5;
+        -webkit-column-count: 2.5;
+        column-count: 2.5;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .masonry {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
 }
