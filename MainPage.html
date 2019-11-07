@@ -4,11 +4,14 @@
 <head>
     <title>Speed-Typer</title>
     <script src="./textbox.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+    <script src="app.js"></script>
     <link href="Format.css" rel="stylesheet" type="text/css">
 
 </head>
 
-<body>
+<body ng-app="myApp">
 
     <div class="header">
         <a href="#default" class="logo">Speed Typer</a>
@@ -18,65 +21,244 @@
         </div>
     </div>
     <div>
-        <p class=demoBox id=demoBox>The quick brown fox jumped over the lazy dog; then, the dog got mad and jumped over the fox.</p>
+        <p class=demoBox id=demoBox>The quick brown fox jumped over the lazy dog; then, the dog got mad and jumped over
+            the fox.</p>
         <form id="input" action="">
             <p id="typeTest">
-                <input id="typetest" class= "input"type="text" placeholder="Type here!" onkeydown="startValid()" autocomplete="off"/>
+                <input id="typetest" class="input" type="text" placeholder="Type here!" onkeydown="startValid()"
+                    autocomplete="off" />
             </p>
         </form>
     </div>
 
-    <div class="row">
-        <div class="column">
-            <div><img src="StopLight.jpg" alt="Stop Light" style="width:300px;height:300px;"></div>
+    <div ng-controller="myCtrl" class="masonry">
+        <div class="grid-sizer"></div>
+        <div class="item">
+            <button><img src="Pictures/StopLight.jpg" alt="Stop Light" style="width:300px;height:300px;"></button>
             <h2>Red Light- Green Light</h2>
             <p>The red light green light game will be a typing test that will turn the back of the screen different
-                colors based on when the user should type. This game will be used to improve a users ability to not look
+                colors based on when the user should type. This game will be used to improve a users ability to not
+                look
                 at the keyboard while typing. The game mode will have a set amount of characters in order to get
-                equalized highscores and will follow the basic rules of red light green light. If the screen is green
-                then the user can type the given paragraph as fast as possible. The screen will then turn yellow to warn
-                users that they need to stop typing and if they do not stop they will automatically loose and be forced
-                to try again. Users highscores will be based on how fast they can complete the task and will only count
+                equalized highscores and will follow the basic rules of red light green light. If the screen is
+                green
+                then the user can type the given paragraph as fast as possible. The screen will then turn yellow to
+                warn
+                users that they need to stop typing and if they do not stop they will automatically loose and be
+                forced
+                to try again. Users highscores will be based on how fast they can complete the task and will only
+                count
                 when the screen is green.
             </p>
         </div>
-        <div class="row">
-            <div class="column">
-            <div ><img src="ascii.png" alt="ascii chart" style="width:400px;height:300px;"></div>
-                <h2>Random characters</h2>
-                <p>The random characters game will be used to help users learn the locations of rarely used keys and odd
-                    key combinations on the keyboard. A randomly generated string of ASCII values will be generated for
-                    the user to type, and the accuracy of typing will be evaluated.
-                </p>
+        <div class='item'>
+
+            <table>
+                <tr>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>Centro comercial Moctezuma</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                </tr>
+                <tr>
+                    <td>Island Trading</td>
+                    <td>Helen Bennett</td>
+                    <td>UK</td>
+                </tr>
+                <tr>
+                    <td>Laughing Bacchus Winecellars</td>
+                    <td>Yoshi Tannamuri</td>
+                    <td>Canada</td>
+                </tr>
+                <tr>
+                    <td>Magazzini Alimentari Riuniti</td>
+                    <td>Giovanni Rovelli</td>
+                    <td>Italy</td>
+                </tr>
+                <tr>
+
+            </table>
+        </div>
+        <div class="item">
+            <div><button><img src="Pictures/ascii.png" alt="ascii chart" style="width:400px;height:300px;"></button>
             </div>
-            <div class="row">
-                <div class="column">
-                    <div><img src="clock.png" alt="Clock" style="width:300px;height:300px;"></div>
-                    <h2>Time Test!</h2>
-                    <p>Timed testing will be used to improve user’s ability to type fast. This will be random paragraphs
-                        and
-                        will be focused on the users WPM. If the user messes up on any character than the cursor will
-                        not
-                        move forward and will stay on the last correct character.
-                    </p>
-                </div>
-                <div class="row">
-                    <div class="column">
-                        <div ><img src="swords.jpg" alt="Swords" style="width:300px;height:300px;"></div>
-                        <h2>Type Fighter</h2>
-                        <p>Type fighter will be a game mode where the user has monsters to “fight” by typing words
-                            correctly
-                            to improve typing accuracy. When the user makes a mistake in their typing, health is
-                            subtracted
-                            from the user’s overall health. The goal is to defeat as many monsters as possible without
-                            dying
-                            and get to a boss. The boss will need to be defeated by typing more difficult strings
-                            without
-                            making mistakes. After the user defeats the boss, their wpm and accuracy will be added to
-                            the
-                            user’s account and, if appropriate, the leaderboard for the game.
-                        </p>
-                    </div>
+            <h2>Random characters</h2>
+            <p>The random characters game will be used to help users learn the locations of rarely used keys and
+                odd
+                key combinations on the keyboard. A randomly generated string of ASCII values will be generated
+                for
+                the user to type, and the accuracy of typing will be evaluated.
+            </p>
+        </div>
+        <div class='item'>
+
+            <table>
+                <tr>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>Centro comercial Moctezuma</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                </tr>
+                <tr>
+                    <td>Island Trading</td>
+                    <td>Helen Bennett</td>
+                    <td>UK</td>
+                </tr>
+                <tr>
+                    <td>Laughing Bacchus Winecellars</td>
+                    <td>Yoshi Tannamuri</td>
+                    <td>Canada</td>
+                </tr>
+                <tr>
+                    <td>Magazzini Alimentari Riuniti</td>
+                    <td>Giovanni Rovelli</td>
+                    <td>Italy</td>
+                </tr>
+            </table>
+        </div>
+        <div class="item">
+            <div><button><img src="Pictures/clock.png" alt="Clock" style="width:300px;height:300px;"></button>
+            </div>
+            <h2>Time Test!</h2>
+            <p>Timed testing will be used to improve user’s ability to type fast. This will be random
+                paragraphs
+                and
+                will be focused on the users WPM. If the user messes up on any character than the cursor
+                will
+                not
+                move forward and will stay on the last correct character.
+            </p>
+        </div>
+        <div class='item'>
+
+            <table>
+                <tr>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>Centro comercial Moctezuma</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                </tr>
+                <tr>
+                    <td>Island Trading</td>
+                    <td>Helen Bennett</td>
+                    <td>UK</td>
+                </tr>
+                <tr>
+                    <td>Laughing Bacchus Winecellars</td>
+                    <td>Yoshi Tannamuri</td>
+                    <td>Canada</td>
+                </tr>
+                <tr>
+                    <td>Magazzini Alimentari Riuniti</td>
+                    <td>Giovanni Rovelli</td>
+                    <td>Italy</td>
+                </tr>
+            </table>
+        </div>
+        <div class='item'>
+            <div><button><img src="Pictures/swords.jpg" alt="Swords" style="width:300px;height:300px;"></button></div>
+            <h2>Type Fighter</h2>
+            <p>Type fighter will be a game mode where the user has monsters to “fight” by typing words
+                correctly
+                to improve typing accuracy. When the user makes a mistake in their typing, health is
+                subtracted
+                from the user’s overall health. The goal is to defeat as many monsters as possible
+                without
+                dying
+                and get to a boss. The boss will need to be defeated by typing more difficult strings
+                without
+                making mistakes. After the user defeats the boss, their wpm and accuracy will be added
+                to
+                the
+                user’s account and, if appropriate, the leaderboard for the game.
+            </p>
+
+        </div>
+        <div class='item'>
+
+            <table>
+                <tr>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>Centro comercial Moctezuma</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                </tr>
+                <tr>
+                    <td>Island Trading</td>
+                    <td>Helen Bennett</td>
+                    <td>UK</td>
+                </tr>
+                <tr>
+                    <td>Laughing Bacchus Winecellars</td>
+                    <td>Yoshi Tannamuri</td>
+                    <td>Canada</td>
+                </tr>
+                <tr>
+                    <td>Magazzini Alimentari Riuniti</td>
+                    <td>Giovanni Rovelli</td>
+                    <td>Italy</td>
+                </tr>
+            </table>
+        </div>
+        <!--Test-->
+
+    </div>
 
 
 </body>
